@@ -26,11 +26,9 @@ void insert(node n){
   heap[index] = n;
  //cout<<index<<endl;
   while(index > 0 && heap[parent(index)].value > heap[index].value){
-  //cout<<parent(index)<<" "<<heap[parent(index)].value<<" "<<index<<" "<<heap[index].value<<endl;
     node temp = heap[parent(index)];
     heap[parent(index)] = heap[index];
     heap[index] = temp;
-  //  cout<<parent(index)<<" "<<heap[parent(index)].value<<" "<<index<<" "<<heap[index].value<<endl;
     index = parent(index);
   }
 }
